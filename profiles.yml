@@ -1,0 +1,33 @@
+transformLoadDBT:
+  outputs:
+    dev:
+      database: eEDB011
+      driver: MySQL ODBC 8.0 ANSI Driver
+      password: root
+      port: 3306
+      schema: eEDB011
+      server: localhost
+      type: mysql
+      username: root
+    prod:
+      database: eEDB011
+      driver: MySQL ODBC 8.0 ANSI Driver
+      password: root
+      port: 3306
+      schema: eDB011
+      server: localhost
+      type: mysql
+      username: root
+  target: dev
+transformLoadPostgresDBT:
+  outputs:
+    dev:
+      dbname: eedb011
+      host: 0.0.0.0
+      pass: root
+      port: 5432
+      schema: eedb011
+      threads: 1
+      type: postgres
+      user: root
+  target: dev
