@@ -1,5 +1,5 @@
 
-{{ config(materialized='table') }}
+{{ config(materialized='table', alias='normalized_bancos') }}
 
 with raw_bancos AS (
     SELECT

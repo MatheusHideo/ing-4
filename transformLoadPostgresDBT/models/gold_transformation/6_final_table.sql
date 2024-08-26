@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='table', alias='final_table') }}
 
 WITH bancos_empregados_reclamacoes AS (
     SELECT

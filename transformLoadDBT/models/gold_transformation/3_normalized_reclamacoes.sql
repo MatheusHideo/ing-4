@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='table', alias='normalized_reclamacoes') }}
 
 WITH raw_reclamacoes AS (
     SELECT 

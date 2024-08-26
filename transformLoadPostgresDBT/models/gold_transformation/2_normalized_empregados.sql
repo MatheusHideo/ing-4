@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='table', alias='normalized_empregados') }}
 
 WITH raw_empregados AS (
     SELECT 

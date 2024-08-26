@@ -1,12 +1,12 @@
-{{ config(materialized='table') }}
+{{ config(materialized='table', alias='bancos_empregados') }}
 
 
 WITH normalized_bancos as (
   SELECT
-		segmento,
-        nome,
-        cnpj
-    FROM eEDB011.normalized_bancos
+		"segmento",
+        "nome",
+        "cnpj"
+    FROM eedb011.normalized_bancos
 ),
 normalized_empregados AS (
       SELECT
@@ -20,7 +20,7 @@ normalized_empregados AS (
         employer_founded,
         employer_industry,
         employer_revenue,
-        url,
+        "url",
         geral,
         cultura_e_valores,
         diversidade_e_inclusao,
@@ -35,7 +35,7 @@ normalized_empregados AS (
     	nome,
     	cnpj
     FROM 
-        eEDB011.normalized_empregados
+        eedb011.normalized_empregados
 )
 
 SELECT 
@@ -49,7 +49,7 @@ SELECT
     e.employer_founded,
     e.employer_industry,
     e.employer_revenue,
-    url,
+    e."url",
     e.geral,
     e.cultura_e_valores,
     e.diversidade_e_inclusao,
