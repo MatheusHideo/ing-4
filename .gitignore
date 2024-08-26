@@ -1,2 +1,5 @@
 *.pyc
 *.log
+data/gold/*
+data/bronze/*
+data/silver/*
