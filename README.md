@@ -34,13 +34,13 @@ O objetivo deste exercício é desenvolver uma pipeline de ingestão de dados ut
 2. Execute o comando abaixo para instalar os requirimentos:
 
    ```bash
-      pip install -r requiriments.txt
+      pip install -r ./requirements.txt
    ```
 
 3. Copie o profile.xml para sua pasta local do DBT tome cuidado isso irá sobreescrever suas configurações:
    ```bash
-      cp ~/.dbt/profile.xml ~/.dbt/profile.old.yml 
-      cp profile.xml ~/.dbt/
+      cp ~/.dbt/profiles.xml ~/.dbt/profile.old.yml 
+      cp profiles.yml ~/.dbt/
    ```
 
 4. Configure seus caminhos e conexões no arquivo config/define
@@ -59,7 +59,7 @@ O objetivo deste exercício é desenvolver uma pipeline de ingestão de dados ut
 
 7. Execute o DBT do mysql:
    ```bash
-      cd transformLoadDBT
+      cd ../transformLoadDBT
       dbt run
    ```
 
